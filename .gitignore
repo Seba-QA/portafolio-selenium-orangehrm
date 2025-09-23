@@ -1,0 +1,68 @@
+\src\test\java\stepDef\LoginSteps.java
+
+# =========================
+# Archivos de sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos de IDE
+# =========================
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# =========================
+# Archivos de compilación
+# =========================
+target/
+bin/
+build/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Reportes de ejecución
+# =========================
+reports/
+test-output/
+surefire-reports/
+cucumber-reports/
+
+# =========================
+# Archivos temporales
+# =========================
+*.tmp
+*.swp
+*.swo
+
+# =========================
+# Archivos del sistema operativo
+# =========================
+ehthumbs.db
+desktop.ini
+
+# =========================
+# Dependencias externas (se regeneran con Maven)
+# =========================
+*.jar
+*.war
+*.ear
+
+# =========================
+# Archivos de entorno
+# =========================
+.env

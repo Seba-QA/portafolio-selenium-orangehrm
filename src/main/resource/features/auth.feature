@@ -5,7 +5,7 @@ Feature: Autenticación de usuarios
     Given que estoy en la página de login
     When ingreso el usuario "<usuario>" y la contraseña "<contraseña>"
     And hago clic en el botón de login
-    Then debería validar el resultado "<resultado>"
+    Then valida el resultado "<resultado>"
 
   Examples:
     | usuario      | contraseña   | resultado     |

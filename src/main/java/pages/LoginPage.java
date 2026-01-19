@@ -13,6 +13,7 @@ public class LoginPage extends BasePage {
     private By loginButton = By.cssSelector("button[type='submit']");
     private By dashboardTitle = By.xpath("//h6[text()='Dashboard']");
     private By errorMessage = By.cssSelector(".oxd-alert-content-text");
+    private By errorEmpty = By.xpath("//span[text()='Required']");
 
     // Elementos con PageFactory
     @FindBy(name = "username")
@@ -61,6 +62,10 @@ public class LoginPage extends BasePage {
 
     public boolean isErrorVisible() {
         return waitForElement(errorMessage, 10).isDisplayed();
+    }
+
+    public boolean isErrorEmptyVisible() {
+        return waitForElement(errorEmpty, 10).isDisplayed();
     }
 
     public String getErrorMessage() {

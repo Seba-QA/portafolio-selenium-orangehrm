@@ -28,7 +28,7 @@ public class LoginSteps {
         loginPage.clickLogin();
     }
 
-    @Then("debería validar el resultado {string}")
+    @Then("valida el resultado {string}")
     public void validarResultado(String resultado) {
         switch (resultado.toLowerCase()) {
             case "exitoso":
@@ -38,10 +38,10 @@ public class LoginSteps {
                 Assert.assertTrue("No apareció mensaje de error", loginPage.isErrorVisible());
                 break;
             case "emptyuser":
-                Assert.assertTrue("No apareció error por usuario vacío", loginPage.isErrorVisible());
+                Assert.assertTrue("No apareció error por usuario vacío", loginPage.isErrorEmptyVisible());
                 break;
             case "emptypass":
-                Assert.assertTrue("No apareció error por contraseña vacía", loginPage.isErrorVisible());
+                Assert.assertTrue("No apareció error por contraseña vacía", loginPage.isErrorEmptyVisible());
                 break;
             default:
                 throw new IllegalArgumentException("Resultado no soportado: " + resultado);

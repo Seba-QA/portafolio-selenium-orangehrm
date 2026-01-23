@@ -1,8 +1,12 @@
 package steps.Auth;
 
 import org.junit.Assert;
+
+import config.DriverFactory;
 import io.cucumber.java.en.*;
 import pages.LoginPage;
+import pages.LoginPage.LoginResult;
+import steps.Hooks;
 
 public class LoginSteps {
 
@@ -29,23 +33,9 @@ public class LoginSteps {
     }
 
     @Then("valida el resultado {string}")
-    public void validarResultado(String resultado) {
-        switch (resultado.toLowerCase()) {
-            case "exitoso":
-                Assert.assertTrue("El Dashboard no es visible", loginPage.isDashboardVisible());
-                break;
-            case "incorrectas":
-                Assert.assertTrue("No apareció mensaje de error", loginPage.isErrorVisible());
-                break;
-            case "emptyuser":
-                Assert.assertTrue("No apareció error por usuario vacío", loginPage.isErrorEmptyVisible());
-                break;
-            case "emptypass":
-                Assert.assertTrue("No apareció error por contraseña vacía", loginPage.isErrorEmptyVisible());
-                break;
-            default:
-                throw new IllegalArgumentException("Resultado no soportado: " + resultado);
-        }
+    public void validarResultado(String resultadoEsperado) {
+        LoginResult esperado = LoginResult.valueOf(resultadoEsperado.toUpperCase());
+        loginPage.validateLoginResult(esperado);
     }
 }
 

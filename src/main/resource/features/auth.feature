@@ -8,10 +8,9 @@ Feature: Autenticación de usuarios
     Then valida el resultado "<resultado>"
 
   Examples:
-    | usuario      | contraseña   | resultado     |
-    | Admin        | admin123     | exitoso       |
-    | FakeUser     | wrong123     | incorrectas   |
-    | Admin        |              | emptyPass     |
-    |              | admin123     | emptyUser     |
-
+    | usuario      | contraseña   | resultado             |
+    | Admin        | admin123     | SUCCESS               |
+    | FakeUser     | wrong123     | INVALID_CREDENTIALS   |
+    | Admin        |              | EMPTY_PASSWORD        |
+    |              | admin123     | EMPTY_USER            |
 

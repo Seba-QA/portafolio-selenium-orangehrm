@@ -71,4 +71,35 @@ public class LoginPage extends BasePage {
     public String getErrorMessage() {
         return driver.findElement(errorMessage).getText();
     }
+
+    public enum LoginResult {
+        SUCCESS,
+        INVALID_CREDENTIALS,
+        EMPTY_USER,
+        EMPTY_PASSWORD
+    }
+
+    public void validateLoginResult(LoginResult expected) {
+    switch (expected) {
+        case SUCCESS:
+            isDashboardVisible();
+            break;
+
+        case INVALID_CREDENTIALS:
+            isErrorVisible();
+            break;
+
+        case EMPTY_USER:
+            isErrorEmptyVisible();
+            break;
+
+        case EMPTY_PASSWORD:
+            isErrorEmptyVisible();
+            break;
+
+        default:
+            throw new IllegalStateException("Resultado no soportado: " + expected);
+    }
+}
+
 }

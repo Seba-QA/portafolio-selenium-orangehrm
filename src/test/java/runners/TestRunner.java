@@ -11,9 +11,10 @@ import io.cucumber.junit.CucumberOptions;
         glue = {"steps"},                        
         tags = "@login",                            
         plugin = {
-                "pretty",
-                "html:target/cucumber-reports.html",
-                "json:target/cucumber.json"
+                //"pretty",
+                // "html:target/cucumber-reports.html",
+                // "json:target/cucumber.json"
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         }
 )
 public class TestRunner {

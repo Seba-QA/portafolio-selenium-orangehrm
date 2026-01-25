@@ -6,7 +6,6 @@ import config.DriverFactory;
 import io.cucumber.java.en.*;
 import pages.LoginPage;
 import pages.LoginPage.LoginResult;
-import steps.Hooks;
 
 public class LoginSteps {
 

@@ -2,9 +2,12 @@ name: QA Automation - Tests & Allure Report
 
 on:
   push:
-    branches: [ "master", "develop", "pipeline" ]
+    branches: [ "main", "develop", "pipeline" ]
   pull_request:
-    branches: [ "master", "develop" ]
+    branches: [ "main", "develop" ]
+
+permissions:
+  contents: write
 
 jobs:
   test:
@@ -43,8 +46,19 @@ jobs:
         run: |
           allure generate target/allure-results --clean -o target/allure-report
 
-      - name: Upload Allure report
+      - name: Upload Allure report (artifact)
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: target/allure-report
+
+      - name: Prepare Allure report for GitHub Pages
+        run: |
+          mkdir public
+          cp -r target/allure-report/* public/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

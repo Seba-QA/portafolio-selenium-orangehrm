@@ -70,4 +70,6 @@ desktop.ini
 # =========================
 # Archivos de entorno
 # =========================
-*.allure
+.allure/
+
+

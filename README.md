@@ -1,5 +1,7 @@
 # OrangeHRM - Portafolio de Automatización con Selenium + Java + Cucumber
 
+[![Report](https://img.shields.io/badge/Report-Mochawesome-blue)](https://seba-qa.github.io/portafolio-selenium-orangehrm/)
+
 Este proyecto forma parte de mi **portafolio profesional de automatización**, y está enfocado en la creación de **pruebas automatizadas end-to-end (E2E)** sobre la aplicación web [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com/) utilizando **Selenium WebDriver**, **Java**, **JUnit** y **Cucumber (BDD)**.   
 
 El objetivo principal es demostrar:

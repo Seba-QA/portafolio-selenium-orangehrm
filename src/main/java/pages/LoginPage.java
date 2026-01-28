@@ -68,10 +68,6 @@ public class LoginPage extends BasePage {
         return waitForElement(errorEmpty, 10).isDisplayed();
     }
 
-    public String getErrorMessage() {
-        return driver.findElement(errorMessage).getText();
-    }
-
     public enum LoginResult {
         SUCCESS,
         INVALID_CREDENTIALS,
@@ -79,27 +75,29 @@ public class LoginPage extends BasePage {
         EMPTY_PASSWORD
     }
 
-    public void validateLoginResult(LoginResult expected) {
+    public boolean validateLoginResult(LoginResult expected) {
+        boolean resultado;
     switch (expected) {
         case SUCCESS:
-            isDashboardVisible();
+            resultado =isDashboardVisible();
             break;
 
         case INVALID_CREDENTIALS:
-            isErrorVisible();
+            resultado = isErrorVisible();
             break;
 
         case EMPTY_USER:
-            isErrorEmptyVisible();
+            resultado = isErrorEmptyVisible();
             break;
 
         case EMPTY_PASSWORD:
-            isErrorEmptyVisible();
+            resultado = isErrorEmptyVisible();
             break;
 
         default:
             throw new IllegalStateException("Resultado no soportado: " + expected);
     }
+    return resultado;
 }
 
 }

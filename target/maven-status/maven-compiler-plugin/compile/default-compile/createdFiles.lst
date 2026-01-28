@@ -1,4 +1,5 @@
 config\DriverFactory.class
+pages\Step.class
 pages\BasePage.class
 pages\LoginPage.class
 pages\LoginPage$LoginResult.class

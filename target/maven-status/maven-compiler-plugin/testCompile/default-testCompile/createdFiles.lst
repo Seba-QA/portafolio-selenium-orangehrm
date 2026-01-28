@@ -1,3 +1,4 @@
 runners\TestRunner.class
+utils\EvidenceHelper.class
 steps\Hooks.class
 steps\Auth\LoginSteps.class

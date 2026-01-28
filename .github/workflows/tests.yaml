@@ -52,11 +52,6 @@ jobs:
           name: allure-report
           path: target/allure-report
 
-      - name: Prepare Allure report for GitHub Pages
-        run: |
-          mkdir public
-          cp -r target/allure-report/* public/
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

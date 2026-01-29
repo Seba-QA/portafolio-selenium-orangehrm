@@ -1,5 +1,8 @@
 # OrangeHRM - Portafolio de Automatización con Selenium + Java + Cucumber
 
+![CI](https://github.com/Seba-QA/portafolio-selenium-orangehrm/actions/workflows/tests.yml/badge.svg)
+[![Allure Report](https://img.shields.io/badge/Allure-Report-orange)](https://seba-qa.github.io/portafolio-selenium-orangehrm/)
+
 Este proyecto forma parte de mi **portafolio profesional de automatización**, y está enfocado en la creación de **pruebas automatizadas end-to-end (E2E)** sobre la aplicación web [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com/) utilizando **Selenium WebDriver**, **Java**, **JUnit** y **Cucumber (BDD)**.   
 
 El objetivo principal es demostrar:
@@ -12,6 +15,17 @@ El objetivo principal es demostrar:
 Este repositorio se actualizará progresivamente, incorporando nuevos módulos, reportes automáticos y mejoras en la integración continua.
 
 ---
+
+## 🧩 Stack Tecnológico
+
+- Java 21
+- Selenium WebDriver
+- Cucumber (BDD)
+- JUnit
+- Maven
+- Allure Reports
+- GitHub Actions
+
 
 ## **Instalación y Ejecución**
 
@@ -56,35 +70,40 @@ orangehrm/
 │
 ├── src/test/java/
 │   ├── runner/                  # Runner JUnit para ejecutar los features
-│   └── steps/                   # Step Definitions enlazadas a los features
-│
+│   ├── steps/                   # Step Definitions enlazadas a los features
+│   └── utils/                   # Helpers de test (evidencias)
+│ 
 ├── pom.xml                      # Dependencias y configuración Maven
 │
 └── README.md                    # Este archivo
 ```
 
 ## **Módulos Actuales**
-  - En proceso
+  - Autenticación de usuarios (Login)
+   - Login exitoso
+   - Credenciales inválidas
+   - Validaciones de campos vacíos
   
 ---
 
 ## 📝 Reportes
+   El proyecto utiliza **Allure Reports** para la visualización de resultados de ejecución.
 
-    Actualmente el proyecto no incluye reportes, pero se integrarán en fases posteriores.
-    Opciones a considerar:
-        - Cucumber HTML Reports
-        - Extent Reports
-        - Allure Reports
+   El reporte incluye:
+   - Estado de los escenarios (passed / failed / broken).
+   - Evidencia visual mediante screenshots automáticos.
+   - Parámetros utilizados en cada escenario.
+   - Duración de ejecución por test.
+   - Información del entorno de ejecución.
 
-    Los reportes serán útiles para:
-        - Obtener métricas de ejecución.
-        - Visualizar resultados de escenarios y pasos.
-        - Integrar con CI/CD en GitHub Actions.
+   📊 El reporte se genera automáticamente en cada ejecución del pipeline y se publica en GitHub Pages:
+
+   👉 Reportes allure: [https://seba-qa.github.io/portafolio-selenium-orangehrm/](https://seba-qa.github.io/portafolio-selenium-orangehrm/)
 
 ---
 
 ## **⚙️ Integración Continua (CI/CD)**
-   **Este repositorio incluye un pipeline en GitHub Actions en versiones futuras y podrá:**
+   **El proyecto cuenta con un pipeline de **GitHub Actions** que:**
    1. Ejecuta todas las pruebas automáticamente en cada push.
    2. Generar reportes.
    3. Publicar los resultados de ejecución en GitHub Pages.

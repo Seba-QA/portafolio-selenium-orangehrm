@@ -2,9 +2,9 @@ name: QA Automation - Tests & Allure Report
 
 on:
   push:
-    branches: [ "master", "develop", "pipeline" ]
+    branches: [ "master", "reportes", "pipeline", "pruebas" ]
   pull_request:
-    branches: [ "master", "develop" ]
+    branches: [ "master", "reportes", "pipeline", "pruebas" ]
 
 permissions:
   contents: write

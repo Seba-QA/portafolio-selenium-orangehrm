@@ -1,5 +1,5 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
 "0","","0","Autenticación de usuarios","1","0","Validación de inicio de sesión ""SUCCESS""","0"
-"0","","0","Autenticación de usuarios","1","0","Validación de inicio de sesión ""INVALID_CREDENTIALS""","0"
-"0","","0","Autenticación de usuarios","1","0","Validación de inicio de sesión ""EMPTY_USER""","0"
 "0","","0","Autenticación de usuarios","1","0","Validación de inicio de sesión ""EMPTY_PASSWORD""","0"
+"0","","0","Autenticación de usuarios","1","0","Validación de inicio de sesión ""EMPTY_USER""","0"
+"0","","0","Autenticación de usuarios","1","0","Validación de inicio de sesión ""INVALID_CREDENTIALS""","0"
